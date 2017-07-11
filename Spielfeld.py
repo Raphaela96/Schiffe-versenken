@@ -41,12 +41,12 @@ class SpielfeldGui(object):
 
     def show_image(self):
         self.resized_image = self.life_image.resize(self.screen_size, Image.NEAREST)
-        self.life_photoimage = ImageTk.PhotoImage(self.resized_image)
-        self.life_image_label.config(image=self.life_photoimage)
+        self.schachbrettmuster_photoimage = ImageTk.PhotoImage(self.resized_image)
+        self.schachbrettmuster_image_label.config(image=self.life_photoimage)
 
     def set_image_size(self, size):
         self.image_size = size
-        self.life_image = Image.new("RGB", (self.image_size[0], self.image_size[1]), "white")
+        self.schachbrettmuster_image = Image.new("RGB", (self.image_size[0], self.image_size[1]), "white")
         self.draw = ImageDraw.Draw(self.life_image)
         self.show_image()
 
